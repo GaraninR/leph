@@ -112,6 +112,7 @@ fi
 
 Init
 
+# VSCode Plugins
 generate_vscode_extentions_script=0
 if [[ " ${user_answer[*]} " =~ " ${items[0]} " ]]; then
     generate_vscode_extentions_script=1
@@ -132,70 +133,49 @@ if [[ " ${user_answer[*]} " =~ " ${items[1]} " ]]; then
     fi
 fi
 
-[[ " ${user_answer[*]} " =~ " ${items[1]} " ]] && Kubernetes
+# Kubernetes
+[[ " ${user_answer[*]} " =~ " ${items[2]} " ]] && Kubernetes
 
 # # 2. VSCode
 # # snap install code --classic
 # curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
 
 # tar -xf vscode_cli.tar.gz
-# # 3. VSCode Plugins
-# code --install-extension ms-azuretools.vscode-docker
-# # 4. Docker
-# apt -y install apt-transport-https ca-certificates curl software-properties-common && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable" -y && sudo apt -y update && apt-cache policy docker-ce && sudo apt -y install docker-ce -y && sudo usermod -aG docker ${USER} && sudo apt -y install docker-compose
 
-# code --install-extension ms-vscode-remote.remote-ssh 
-# code --install-extension ms-vscode-remote.remote-ssh-edit 
-# code --install-extension ms-vscode-remote.remote-containers 
+# # AWS
+[[ " ${user_answer[*]} " =~ " ${items[3]} " ]] && AWS
 
-# Docker: 
-# code --install-extension ms-azuretools.vscode-docker 
-
-# # 5. Kubernetes
-# curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-# install minikube-linux-amd64 /usr/local/bin/minikube
-# curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-# install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-# wget https://get.helm.sh/helm-v3.11.0-rc.1-linux-amd64.tar.gz
-# tar -zxvf helm-v3.11.0-rc.1-linux-amd64.tar.gz
-# mv linux-amd64/helm /usr/local/bin/helm
-
-# kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null
-# echo 'alias k=kubectl' >>~/.bashrc
-# echo 'alias mk=minikube' >>~/.bashrc
-# echo 'alias k=kubectl' >>~/.profile
-# echo 'alias mk=minikube' >>~/.profile
-
-# minikube start -p vagrant-minikube
 # # NFS
+[[ " ${user_answer[*]} " =~ " ${items[4]} " ]] && NFS
 # apt install nfs-kernel-server nfs-common -y
 
 # # PowerShell
+[[ " ${user_answer[*]} " =~ " ${items[5]} " ]] && PowerShell
 # wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
 # dpkg -i packages-microsoft-prod.deb
 # rm packages-microsoft-prod.deb
 # apt update
 # apt install -y powershell
 
-# # Python
-# echo 'alias python=python3' >> ~/.bashrc
-# echo 'alias pip=pip3' >> ~/.bashrc
-# echo 'alias python=python3' >> ~/.profile
-# echo 'alias pip=pip3' >> ~/.profile
-# apt install build-essential make libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
-# curl https://pyenv.run | bash
-# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-# echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-# echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-# echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-# echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-# echo 'eval "$(pyenv init -)"' >> ~/.profile
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# # error
-# pyenv install 3.10.11
-# pyenv global 3.10.11
-# curl -sSL https://install.python-poetry.org | python3 -
-# echo 'export PATH="/home/vagrant/.local/bin:$PATH"' >> ~/.bashrc
-# echo 'export PATH="/home/vagrant/.local/bin:$PATH"' >> ~/.profile
+# Terraform
+[[ " ${user_answer[*]} " =~ " ${items[6]} " ]] && Terraform
+
+# PythonEnv
+[[ " ${user_answer[*]} " =~ " ${items[7]} " ]] && PythonEnv
+
+# MSDotnet
+[[ " ${user_answer[*]} " =~ " ${items[8]} " ]] && MSDotnet
+
+# Java
+[[ " ${user_answer[*]} " =~ " ${items[9]} " ]] && Java
+
+# NodeJS
+[[ " ${user_answer[*]} " =~ " ${items[10]} " ]] && NodeJS
+
+# ArgoCD
+[[ " ${user_answer[*]} " =~ " ${items[11]} " ]] && ArgoCD
+
+# Linuxbrew
+[[ " ${user_answer[*]} " =~ " ${items[12]} " ]] && Linuxbrew
+
+sudo apt autoremove
