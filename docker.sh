@@ -10,3 +10,4 @@ sudo apt-cache policy docker-ce
 sudo apt -y install docker-ce -y
 sudo usermod -aG docker ${USER}
 sudo apt -y install docker-compose
+exec bash --login
