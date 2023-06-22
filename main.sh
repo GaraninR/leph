@@ -75,7 +75,6 @@ items=(\
 "ArgoCD" \
 "Linuxbrew" \
 "Additional VSCode Extentions" \
-"VSCode Testing Extentions"\
 )
 
 descriptions=(\
