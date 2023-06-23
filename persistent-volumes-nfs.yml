@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume01
+spec:
+  capacity:
+    storage: 2Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: minikube-nfs
+  # mountOptions:
+  #   - hard
+  #   - nfsvers=4.1
+  nfs:
+    path: /home/vagrant/Storages/volume01
+    server: 192.168.121.109

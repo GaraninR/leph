@@ -172,7 +172,6 @@ fi
 # Linuxbrew
 [[ " ${user_answer[*]} " =~ " ${items[12]} " ]] && Linuxbrew
 
-
 sudo apt autoremove -y
 
 if [[ " ${user_answer[*]} " =~ " ${items[13]} " ]] ; then
@@ -215,6 +214,20 @@ if [[ " ${user_answer[*]} " =~ " ${items[13]} " ]] ; then
     echo "code --install-extension hbenl.vscode-test-explorer" >> $vs_code_extentions_installation_script
     echo "code --install-extension littlefoxteam.vscode-python-test-adapter" >> $vs_code_extentions_installation_script
     echo "code --install-extension ms-vscode.test-adapter-converter" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-toolsai.jupyter" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-toolsai.jupyter-keymap" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-toolsai.jupyter-renderers" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-toolsai.vscode-jupyter-cell-tags" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-toolsai.vscode-jupyter-slideshow" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-vscode.js-debug-nightly" >> $vs_code_extentions_installation_script
+    echo "code --install-extension dbaeumer.vscode-eslint" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-vscode.vscode-typescript-next" >> $vs_code_extentions_installation_script
+    echo "code --install-extension xabikos.JavaScriptSnippets" >> $vs_code_extentions_installation_script
+    echo "code --install-extension hbenl.vscode-jasmine-test-adapter" >> $vs_code_extentions_installation_script
+    echo "code --install-extension Orta.vscode-jest" >> $vs_code_extentions_installation_script
+    echo "code --install-extension andys8.jest-snippets" >> $vs_code_extentions_installation_script
+    echo "code --install-extension SonarSource.sonarlint-vscode" >> $vs_code_extentions_installation_script
+    echo "code --install-extension ms-python.pylint" >> $vs_code_extentions_installation_script
 fi
 
 if [[ " ${user_answer[*]} " =~ " ${items[0]} " ]]; then

@@ -11,9 +11,9 @@ sudo mv linux-amd64/helm /usr/local/bin/helm
 
 kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null
 echo 'alias k=kubectl' >>~/.bashrc
-echo 'alias mk=minikube -p vagrant-mk' >>~/.bashrc
+echo 'alias mk="minikube -p vagrant-mk"' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.profile
-echo 'alias mk=minikube -p vagrant-mk' >>~/.profile
+echo 'alias mk="minikube -p vagrant-mk"' >>~/.profile
 
 minikube -p vagrant-mk start
 
