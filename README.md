@@ -10,6 +10,7 @@ To launch LEPH:
 
 ```bash
 ./main.sh
+```
 
 This will open a whiptail console menu:
 
@@ -35,6 +36,7 @@ Clone this repo:
 Copy code
 ```bash
 git clone https://github.com/GaraninR/leph.git
+```
 
 Then run ./leph.sh to launch.
 
